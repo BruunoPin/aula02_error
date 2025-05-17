@@ -48,7 +48,24 @@
 # #### try-except e if
 
 # 21: Conversor de Temperatura
+# try:
+#     celsius = float(input('Digite a temperatura em Celsius: '))
+#     fahrenheit = (celsius * 9/5) + 32
+# except ValueError as e:
+#     print('Erro: O valor inserido não é um número válido.')
+#     print(e)
+
 # 22: Verificador de Palíndromo
 # 23: Calculadora Simples
 # 24: Classificador de Números
 # 25: Conversão de Tipo com Validação
+
+entrada_lista = input("Digite uma lista de números separados por vírgula: ")
+numeros_str = entrada_lista.split(",")
+numeros_int = []
+try:
+    for num in numeros_str:
+        numeros_int.append(int(num.strip()))
+    print("Lista de inteiros:", numeros_int)
+except ValueError:
+    print("Erro: certifique-se de que todos os elementos são números inteiros válidos.")
